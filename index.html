@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Fitness - Personal Trainer & Judo Athlete</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .gradient-overlay {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+        }
+        .custom-red {
+            background-color: #ff0000;
+        }
+        .text-custom-red {
+            color: #ff0000;
+        }
+        .transform-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold">SAHIL<span class="text-custom-red">.FITNESS</span></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-custom-red transition">Home</a>
+                    <a href="#about" class="hover:text-custom-red transition">About</a>
+                    <a href="#services" class="hover:text-custom-red transition">Services</a>
+                    <a href="#transformations" class="hover:text-custom-red transition">Results</a>
+                    <a href="#resources" class="hover:text-custom-red transition">Resources</a>
+                    <a href="#contact" class="hover:text-custom-red transition">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/95 w-full">
+            <div class="flex flex-col items-center py-4 space-y-4">
+                <a href="#home" class="hover:text-custom-red transition">Home</a>
+                <a href="#about" class="hover:text-custom-red transition">About</a>
+                <a href="#services" class="hover:text-custom-red transition">Services</a>
+                <a href="#transformations" class="hover:text-custom-red transition">Results</a>
+                <a href="#resources" class="hover:text-custom-red transition">Resources</a>
+                <a href="#contact" class="hover:text-custom-red transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative flex items-center">
+        <div class="absolute inset-0 gradient-overlay">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48" class="w-full h-full object-cover" alt="Fitness Background">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Transform Your Body with Sahil</h1>
+                <p class="text-xl md:text-2xl mb-8">Achieve Your Fitness Goals with Expert Guidance and Proven Results</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full text-center transition">Book Free Consultation</a>
+                    <a href="#resources" class="border-2 border-white hover:border-red-600 px-8 py-3 rounded-full text-center transition">Download Free Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-zinc-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-16 text-center">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b" class="rounded-lg shadow-xl" alt="Trainer">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Personal Trainer & Judo Athlete</h3>
+                    <p class="mb-6">With years of experience in personal training and competitive Judo, I've developed a unique approach to fitness that combines functional strength, athletic performance, and sustainable results.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="border border-red-600 p-4 rounded-lg">
+                            <h4 class="font-bold mb-2">Experience</h4>
+                            <p>10+ Years</p>
+                        </div>
+                        <div class="border border-red-600 p-4 rounded-lg">
+                            <h4 class="font-bold mb-2">Clients Trained</h4>
+                            <p>500+</p>
+                        </div>
+                    </div>
+                    <p class="text-lg font-semibold italic">"Helping everyday people get strong, lean, and confident with expert training."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-16 text-center">Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900 p-6 rounded-xl transform-card">
+                    <i class="bi bi-person-workspace text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">1-on-1 Training</h3>
+                    <p class="mb-4">Personalized training sessions tailored to your goals</p>
+                    <a href="#contact" class="text-red-600 hover:text-red-400">Learn More →</a>
+                </div>
+                <div class="bg-zinc-900 p-6 rounded-xl transform-card">
+                    <i class="bi bi-clipboard2-check text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Custom Programs</h3>
+                    <p class="mb-4">Detailed workout and nutrition plans for your needs</p>
+                    <a href="#contact" class="text-red-600 hover:text-red-400">Learn More →</a>
+                </div>
+                <div class="bg-zinc-900 p-6 rounded-xl transform-card">
+                    <i class="bi bi-trophy text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Athletic Training</h3>
+                    <p class="mb-4">Sport-specific conditioning and performance</p>
+                    <a href="#contact" class="text-red-600 hover:text-red-400">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformations Section -->
+    <section id="transformations" class="py-20 bg-zinc-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-16 text-center">Client Transformations</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-black p-6 rounded-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61" class="rounded-lg" alt="Transformation">
+                        <div class="absolute top-4 left-4 bg-red-600 px-4 py-2 rounded-full">
+                            -30kg
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold mb-2">John's Journey</h4>
+                        <p>"Amazing transformation in just 6 months. The program was challenging but worth every moment."</p>
+                    </div>
+                </div>
+                <div class="bg-black p-6 rounded-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1583454155184-870a1f63be44" class="rounded-lg" alt="Transformation">
+                        <div class="absolute top-4 left-4 bg-red-600 px-4 py-2 rounded-full">
+                            +15kg Muscle
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold mb-2">Sarah's Progress</h4>
+                        <p>"The strength gains were incredible. I've never felt more confident and powerful."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-16 text-center">Free Resources</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900 p-6 rounded-xl transform-card">
+                    <h3 class="text-xl font-bold mb-4">7-Day Fat Loss Plan</h3>
+                    <p class="mb-4">Complete guide with workouts and meal plans</p>
+                    <button onclick="downloadPDF()" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full transition">Download Now</button>
+                </div>
+                <div class="bg-zinc-900 p-6 rounded-xl transform-card">
+                    <h3 class="text-xl font-bold mb-4">Training Blog</h3>
+                    <ul class="space-y-4">
+                        <li>• How to Train Like a Judo Athlete</li>
+                        <li>• Top 5 Mistakes in Fat Loss</li>
+                        <li>• What to Eat for Strength</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-900 p-6 rounded-xl transform-card">
+                    <h3 class="text-xl font-bold mb-4">Instagram Feed</h3>
+                    <p class="mb-4">Follow for daily tips and motivation</p>
+                    <a href="https://instagram.com/sahil.fitttt" target="_blank" class="text-red-600 hover:text-red-400">@sahil.fitttt →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-zinc-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-16 text-center">Get in Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <a href="https://wa.me/1234567890" class="flex items-center space-x-4 hover:text-red-600">
+                            <i class="bi bi-whatsapp text-2xl"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://instagram.com/sahil.fitttt" class="flex items-center space-x-4 hover:text-red-600">
+                            <i class="bi bi-instagram text-2xl"></i>
+                            <span>@sahil.fitttt</span>
+                        </a>
+                        <a href="mailto:contact@sahilfitness.com" class="flex items-center space-x-4 hover:text-red-600">
+                            <i class="bi bi-envelope text-2xl"></i>
+                            <span>contact@sahilfitness.com</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <form id="contactForm" class="space-y-4">
+                        <input type="text" placeholder="Name" class="w-full p-3 bg-black rounded-lg">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="number" placeholder="Weight (kg)" class="p-3 bg-black rounded-lg">
+                            <input type="number" placeholder="Height (cm)" class="p-3 bg-black rounded-lg">
+                        </div>
+                        <textarea placeholder="Your fitness goals" class="w-full p-3 bg-black rounded-lg h-32"></textarea>
+                        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full transition w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2024 Sahil Fitness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function downloadPDF() {
+            alert('Your 7-Day Fat Loss Plan will start downloading shortly!');
+            // Implementation for PDF download would go here
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                if(window.innerWidth < 768) {
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
